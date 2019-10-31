@@ -22,7 +22,7 @@ Programs/Languages Used
 Javascript
 Node
 
-![concert-this](anish0913.github.com/repository/images/concert-this.png)
+![concert-this](anish0913.github.com/liri-node-app/images/concert-this.png)
 ![spotify-this](anish0913.github.com/repository/images/spotify-this.png)
 ![movie-this](anish0913.github.com/repository/images/movie-this.png)
 ![do-what-it-says](anish0913.github.com/repository/images/do-what-it-says.png)
