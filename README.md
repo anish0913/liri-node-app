@@ -4,22 +4,22 @@ This assignment will allow the user to use a interface like SIRI in the command 
 
 # Node Packagaes/API's Used
 
-Spotify
-Axios
-Moment
-DotEnv
-Bands In Town
-OMDB API
+Spotify,
+Axios,
+Moment,
+DotEnv,
+Bands In Town,
+OMDB API,
 
 # Commands Used
-node liri.js concert-this
-node liri.js spotify-this-song
-node liri.js movie-this
-node liri.js do-what-it-says
+node liri.js concert-this,
+node liri.js spotify-this-song,
+node liri.js movie-this,
+node liri.js do-what-it-says,
 
 # Programs/Languages Used
-Javascript
-Node
+Javascript,
+Node,
 
 
 ![concert-this](anish0913.github.com/repositoryimages/concert-this.png)
