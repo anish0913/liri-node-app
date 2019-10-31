@@ -2,27 +2,26 @@ require("dotenv").config();
 
 // NPM Packages & API keys
 var keys = require("./keys.js");
-var Spotify = require('node-spotify-api');
+var spotifyKey = require('node-spotify-api');
 var axios = require("axios");
 var moment = require("moment");
-
 var fs = require("fs");
-var query = process.argv[3];
-var option = process.argv[2];
 
+var randomA = process.argv[3];
+var randomB = process.argv[2];
 
-// Initialize Spotify client
-var spotify = new Spotify(keys.spotify);
-switch (option) 
+// Spotify Client & Switch statment
+var spotify = new spotifyKey(keys.spotify);
+switch (randomB) 
 {
     case "movie-this":
-        movieThis(query);
+        movieThis(randomA);
         break;
     case "spotify-this-song":
-        spotifyCall(query);
+        spotifyThis(randomA);
         break;
     case "concert-this":
-        concertThis(query);
+        concertThis(randomA);
         break;
     default:
 
@@ -31,19 +30,19 @@ fs.readFile("random.txt", "utf8", function (error, data)
 {
             
 var data = data.split(",");
-var data2 = data[1];
+var data2 = data[1]; 
 if (error) 
 {
 return console.log(error);
 }
 
-spotifyCall(data2);
+spotifyThis(data2);
 })
 }
 
 
 // SPOTIFY-THIS-SONG
-function spotifyCall(songName) 
+function spotifyThis(songName) 
 {
 spotify.search({ type: 'track', query: songName }, function (err, data) 
 {
@@ -55,7 +54,7 @@ console.log("\n_Track Info_" + "\nArtist: " + data.tracks.items[0].artists[0].na
 });
 }
 
-// MOVIE-THIS
+// MOVIE-THIS & Api
 function movieThis(movieName) 
 {
 if (!movieName) 
@@ -71,13 +70,11 @@ console.log("\n_Movie Info_" + "\nTitle: " + response.data.Title + "\nRelease Ye
 );
 }
 
-// CONCERT-THIS
+// CONCERT-THIS & Api
 function concertThis(artist) {
-  console.log('artist', artist);
   var bandsQueryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
   axios.get(bandsQueryUrl).then(function (response) {
   console.log("_Upcoming Events_");
-    console.log(response.data[0])
   console.log("Artist: " + artist + "\nVenue: " + response.data[0].venue.name + "\nLocation: " + response.data[0].venue.country + "\nDate: " + response.data[0].datatime + "\nKeep Searching!");
   });
 }
