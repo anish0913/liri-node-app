@@ -22,7 +22,7 @@ Javascript,
 Node,
 
 
-![concert-this](anish0913.github.com/repositoryimages/concert-this.png)
-![spotify-this](anish0913.github.com/repository/images/spotify-this.png)
-![movie-this](anish0913.github.com/repository/images/movie-this.png)
-![do-what-it-says](anish0913.github.com/repository/images/do-what-it-says.png)
+![concert-this](images/github/concert-this.png)
+![spotify-this](images/github/spotify-this.png)
+![movie-this](images/github/movie-this.png)
+![do-what-it-says](images/github/do-what-it-says.png)
